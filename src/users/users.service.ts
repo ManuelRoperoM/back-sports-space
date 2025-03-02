@@ -51,4 +51,8 @@ export class UsersService {
       };
     }
   }
+
+  async finUser(userEmail: string): Promise<User> {
+    return this.userRepository.findOneBy({ email: userEmail });
+  }
 }

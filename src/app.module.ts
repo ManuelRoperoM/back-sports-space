@@ -12,6 +12,7 @@ import { Rol } from './users/entities/rol.entity';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { MailModule } from './mail/mail.module';
 import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 import * as dotenv from 'dotenv';
 
 dotenv.config({ path: 'secret.env' });
@@ -50,6 +51,7 @@ dotenv.config({ path: 'secret.env' });
       },
     }),
     MailModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
